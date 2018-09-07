@@ -1,3 +1,4 @@
+<?php include 'controllerTP3.php' ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,18 +11,11 @@
     <body>
         <div class="container mt-3">
             <h1 class="text-center mb-5">Auteurs français</h1>
-            <?php include 'controllerTP3.php' ?>
-            <?php function showArray($array) { ?>
-                <ul class="list-unstyled">
-                    <li class="media">
-                        <img src="<?= $array['portrait'] ?>" class="mb-5" />
-                        <div class="media-body">
-                            <h3 class="text-center mt-2"><?= $array['name'] . ' ' . $array['firstname']; ?></h3>
-                            <p class="text-center text-dark ml-4"><?= $array['presentation'] ?></p>
-                        </div>
-                    </li>
-                </ul>
-            <?php } ?>
+            <?= // On fait un echo de la fonction avec en paramètre le nom du tableau pour qu'il s'affiche
+            displayArray($portrait1); ?>
+            <?= displayArray($portrait2); ?>
+            <?= displayArray($portrait3); ?>
+            <?= displayArray($portrait4); ?>
         </div>
     </body>
 </html>
